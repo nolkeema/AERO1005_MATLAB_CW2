@@ -1,0 +1,17 @@
+Data logging initiated - 16-Apr-2026 22:47:11
+Location - Capsule
+Minute 0	22.83 degC
+Minute 1	22.83 degC
+Minute 2	22.34 degC
+Minute 3	22.34 degC
+Minute 4	22.34 degC
+Minute 5	22.34 degC
+Minute 6	22.34 degC
+Minute 7	22.34 degC
+Minute 8	22.34 degC
+Minute 9	22.34 degC
+Minute 10	22.34 degC
+Max temp	23.31 degC
+Min temp	21.85 degC
+Average temp	22.40 degC
+Data logging terminated
