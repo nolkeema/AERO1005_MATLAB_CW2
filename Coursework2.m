@@ -97,7 +97,12 @@ temp_monitor(a);
 
 %% TASK 3 - ALGORITHMS – TEMPERATURE PREDICTION [30 MARKS]
 
-% Insert answers here
+clc;
+clear;
+close all;
+a = arduino('/dev/cu.usbserial-120','Uno');
+
+temp_prediction(a);
 
 
 %% TASK 4 - REFLECTIVE STATEMENT [5 MARKS]
