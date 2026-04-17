@@ -64,10 +64,12 @@ try
             writeDigitalPin(a, greenPin, 0);
             writeDigitalPin(a, yellowPin, 0);
 
-            writeDigitalPin(a, redPin, 1);        % red on
-            pause(0.25);
-            writeDigitalPin(a, redPin, 0);
-            pause(0.25);
+            for blink = 1:2
+                writeDigitalPin(a, redPin, 1);    % red on
+                pause(0.25);
+                writeDigitalPin(a, redPin, 0);
+                pause(0.25);
+            end
         end
     end
 catch
