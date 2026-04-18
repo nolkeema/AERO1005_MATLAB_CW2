@@ -43,13 +43,13 @@ startTime = tic;  % Start timing
 % For loop
 while true
 
-    % Read voltage from analogue pin
+    % Read voltage
     voltage = readVoltage(a, sensorPin);
 
     % Convert voltage to temperature
     temp = (voltage - V0) / TC;
 
-    % Record timestamp and temperature
+    % Record time and temperature
     elapsed = toc(startTime);
     temps(end+1) = temp;
     times(end+1) = elapsed;
@@ -63,7 +63,7 @@ while true
         t_win = times(end - winSize + 1 : end);
         T_win = temps(end - winSize + 1 : end);
 
-        % Fit a linear polynomial (degree 1) to the window
+        % Fit a linear polynomial to the window
         % p(1) is the slope = rate of change in deg C/s
         p    = polyfit(t_win, T_win, 1);
         rate = p(1);   % deg C/s
@@ -97,7 +97,7 @@ while true
         writeDigitalPin(a, yellowPin, 1);
 
     elseif temp >= T_low && temp <= T_high
-        % Rate is within safe limits AND within comfort range, GREEN constant light
+        % Rate is within safe limits and within comfort range, GREEN constant light
         writeDigitalPin(a, greenPin, 1);
 
     end
